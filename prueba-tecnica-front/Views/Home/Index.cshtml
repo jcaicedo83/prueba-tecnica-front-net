@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Usuario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">prueba</h1>
+    <p>prueba tecnica.</p>
+</div>
+<div class="container">
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td><input type="text" name="nombreUsuario" /></td>
+        </tr>
+        <tr>
+            <td>sexo</td>
+            <td>
+                <select name="selSexo" >
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha nacimiento</td>
+            <td><input type="date" name="fechaUsuario" /></td>
+        </tr>
+    </table>
+    <button name="btnAgregar" onclick="agregar()">agregar</button>
+</div>

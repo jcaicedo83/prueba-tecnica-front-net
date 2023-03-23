@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Usuario-Consulta";
+}
+<asp:Content ID="Content1" runat="server">
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>fecha-nacimiento</th>
+                    <th>sexo</th>
+                    <th>acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usr in ViewBag.Usuarios ){
+                    <tr>
+                        <td>@usr.Id</td>
+                        <td>@usr.nombre</td>
+                        <td>@usr.fechaNacimiento</td>
+                        <td>@usr.sexo</td>
+                        <td>
+                            <button onclick="editar(usr)" name="btnEditar">editar</button>
+                            <button onclick="eliminar(usr)" name="btnEliminar">eliminar</button>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</asp:Content>
